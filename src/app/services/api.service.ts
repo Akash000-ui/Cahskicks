@@ -61,9 +61,8 @@ export class ApiService {
      * Matches React: getCreditLimit()
      */
     getCreditLimit(): Observable<CreditLimit> {
-        return this.http.get<CreditLimit[]>(`${this.BASE_URL}${this.CREDIT_API}`)
+        return this.http.get<CreditLimit>(`${this.BASE_URL}${this.CREDIT_API}`)
             .pipe(
-                map(creditArray => creditArray[0]), // API returns array, we need first item
                 catchError(this.handleError)
             );
     }
@@ -78,6 +77,10 @@ export class ApiService {
             contracts: cashKickData.contracts,
             rate: cashKickData.rate,
             payBackAmount: cashKickData.payBackAmount,
+            maturity: cashKickData.maturity,
+            totalRecieved: cashKickData.totalRecieved,
+            totalFinanced: cashKickData.totalFinanced,
+            status: cashKickData.status,
             currencyCode: cashKickData.currencyCode
         };
 

@@ -16,31 +16,25 @@ server.get('/contracts-list', (req, res) => {
   res.status(200).send(contracts)
 })
 server.post('/cashkicks', (req, res) => {
-  const { name, rate, currencyCode, contracts } = req.body;
+  const { name, rate, currencyCode, contracts, maturity, totalRecieved, totalFinanced, status } = req.body;
   let { payBackAmount } = req.body
   const db = router.db; // LowDB instance
 
-  // Check if name and contracts array are provided
-  if (!name || !contracts || !Array.isArray(contracts) || !payBackAmount || !rate || !currencyCode) {
+  // Check if required fields are provided
+  if (!name || !contracts || !Array.isArray(contracts) || !currencyCode) {
     return res.status(400).json({ error: 'Invalid request body' });
   }
 
-  payBackAmount = parseFloat(payBackAmount.toFixed(2))
-
-  // Calculate the date one year from now and format it
-  const oneYearFromNow = add(new Date(), { years: 1 });
-  const formattedMaturityDate = format(oneYearFromNow, 'MMMM d, yyyy');
-
-  // Create the new cashkick
+  // Create the new cashkick in the exact format specified
   const newCashkick = {
-    id: Date.now(), // Simple unique ID generator
+    id: Date.now().toString(), // Convert to string to match format
     name,
-    status: 'PENDING',
-    maturity: formattedMaturityDate,
-    rate: 12,
+    status: status || 'FUNDED', // Use provided status or default to FUNDED
+    maturity: maturity || format(add(new Date(), { years: 1 }), 'MMMM d, yyyy'),
+    rate: rate || 12, // Use provided rate or default to 12
     currencyCode: currencyCode,
-    totalRecieved: payBackAmount - (payBackAmount * rate) / 100,
-    totalFinanced: payBackAmount,
+    totalRecieved: totalRecieved || Math.round((payBackAmount || 0) * 0.88), // Amount received (after 12% fee)
+    totalFinanced: totalFinanced || Math.round(payBackAmount || 0), // Total financed amount
   };
 
   // Update the contracts' status to 'UNAVAILABLE'
@@ -56,8 +50,8 @@ server.post('/cashkicks', (req, res) => {
 
   // Subtract totalFinanced from availableCreditAmount in credit
   const credit = db.get('credit').value()[0];
-  if (credit) {
-    const updatedAvailableCreditAmount = credit.availableCreditAmount - payBackAmount;
+  if (credit && totalFinanced) {
+    const updatedAvailableCreditAmount = credit.availableCreditAmount - totalFinanced;
     db.get('credit')
       .find({ totalAmount: credit.totalAmount })
       .assign({ availableCreditAmount: updatedAvailableCreditAmount })
@@ -73,6 +67,6 @@ server.post('/cashkicks', (req, res) => {
 });
 
 server.use(router);
-server.listen(3001, () => {
-  console.log('JSON Server is running on port 3001');
+server.listen(3000, () => {
+  console.log('JSON Server is running on port 3000');
 });

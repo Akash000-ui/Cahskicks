@@ -181,6 +181,14 @@
       "fee": 12
     }
   ],
+  "credit": {
+    "availableCreditAmount": 880000,
+    "currencyCode": "USD",
+    "rate": 12,
+    "termPeriod": 12,
+    "termType": "MONTHLY",
+    "totalAmount": 880000
+  },
   "cashkicks": [
     {
       "id": "1721123949384",
@@ -213,17 +221,34 @@
       "totalFinanced": 712000
     },
     {
-      "id": "1432",
-      "name": "jdhfnbbdkfj",
+      "id": "b7b5",
+      "name": "jhcxcxv",
+      "contracts": [
+        "4"
+      ],
+      "rate": 12,
+      "payBackAmount": 628656,
+      "maturity": "September 9, 2026",
+      "totalRecieved": 493944,
+      "totalFinanced": 628656,
+      "status": "FUNDED",
+      "currencyCode": "USD"
+    },
+    {
+      "id": "91a8",
+      "name": "First",
       "contracts": [
         "4",
         "9",
         "14",
-        "5",
-        "7"
+        "2"
       ],
-      "rate": 0.12,
-      "payBackAmount": 1864315.04,
+      "rate": 12,
+      "payBackAmount": 1679543.04,
+      "maturity": "September 9, 2026",
+      "totalRecieved": 1319640.96,
+      "totalFinanced": 1679543.04,
+      "status": "FUNDED",
       "currencyCode": "USD"
     }
   ]

@@ -41,6 +41,10 @@ export interface CashKickCreateRequest {
     rate: number;
     payBackAmount: number;
     name: string;
+    maturity: string;
+    totalRecieved: number;
+    totalFinanced: number;
+    status: 'FUNDED' | 'PENDING';
     currencyCode: CurrencyCode;
 }
 

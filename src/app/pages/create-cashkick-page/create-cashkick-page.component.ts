@@ -480,11 +480,24 @@ export class CreateCashkickPageComponent implements OnInit, OnDestroy {
     this.isSubmitting = true;
 
     const cashKickName = this.cashkickForm.get('name')?.value || '';
+
+    // Calculate maturity date (12 months from now)
+    const maturityDate = new Date();
+    maturityDate.setMonth(maturityDate.getMonth() + this.termMonths);
+
     const cashKickData: CashKickCreateRequest = {
       contracts: this.selectedContractIds,
-      rate: 0.12, // 12% rate as shown in the calculation
+      rate: this.interestRate, // 12% rate as shown in the calculation
       payBackAmount: this.calculatePayback(),
       name: cashKickName,
+      maturity: maturityDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }),
+      totalFinanced: this.calculatePayback(),
+      totalRecieved: this.calculateNetAmount(),
+      status: 'FUNDED',
       currencyCode: 'USD'
     };
 
