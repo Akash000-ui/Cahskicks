@@ -1,0 +1,116 @@
+// Button Component Styles
+// Matching React button component with exact sizing and colors
+
+button {
+    font-family: 'Gilroy', sans-serif;
+    border-radius: 12px;
+    width: fit-content;
+    min-width: fit-content;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    gap: 8px;
+
+    &:disabled {
+        opacity: 0.56;
+        cursor: not-allowed;
+    }
+
+    .loading-spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid transparent;
+        border-top: 2px solid currentColor;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+// Size variants (matching React exactly)
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.btn-md {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+}
+
+.btn-fit {
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+// Type variants (matching React theme colors exactly)
+.btn-primary {
+    background-color: var(--primary-purple-500);
+    color: var(--primary-white);
+    font-weight: 600;
+
+    &:hover:not(:disabled) {
+        background-color: var(--primary-purple-500);
+        color: var(--primary-white);
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-background {
+    background-color: rgba(40, 39, 43, 0.8);
+    color: var(--primary-white);
+    font-weight: 600;
+
+    &:hover:not(:disabled) {
+        background-color: rgba(40, 39, 43, 0.9);
+        color: var(--primary-white);
+        transform: translateY(-1px);
+    }
+}
+
+.btn-bordered {
+    background-color: transparent;
+    color: var(--primary-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+
+    &:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--primary-white);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--primary-purple-400);
+
+    &:hover:not(:disabled) {
+        background-color: rgba(108, 93, 211, 0.1);
+        color: var(--primary-purple-400);
+    }
+}

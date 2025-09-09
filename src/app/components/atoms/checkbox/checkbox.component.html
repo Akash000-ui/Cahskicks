@@ -1,0 +1,15 @@
+<div class="checkbox-container" [class.disabled]="disabled">
+    <div class="checkbox-input" [class.checked]="checked" [class.indeterminate]="indeterminate"
+        [class.size-small]="size === 'small'" [class.size-medium]="size === 'medium'" (click)="onToggle()"
+        role="checkbox" [attr.aria-checked]="indeterminate ? 'mixed' : checked" [attr.aria-disabled]="disabled"
+        tabindex="0" (keydown.space)="$event.preventDefault(); onToggle()"
+        (keydown.enter)="$event.preventDefault(); onToggle()">
+
+        <app-icon [src]="iconSrc" [width]="iconSize" [height]="iconSize">
+        </app-icon>
+    </div>
+
+    <label *ngIf="label" class="checkbox-label" (click)="onToggle()">
+        {{ label }}
+    </label>
+</div>

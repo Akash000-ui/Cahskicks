@@ -1,0 +1,68 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 210px;
+    padding: 16px;
+    background: var(--bg-elevation-1);
+    color: var(--text-low-emphasis);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    justify-content: flex-start;
+
+    &:hover:not(:disabled) {
+        background: var(--bg-elevation-2);
+        color: var(--text-high-emphasis);
+    }
+
+    &.active {
+        background: var(--bg-elevation-2);
+        color: var(--text-high-emphasis);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .nav-icon {
+        opacity: 0.8;
+        filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(296%) hue-rotate(225deg) brightness(91%) contrast(90%);
+    }
+
+    &.active .nav-icon,
+    &:hover:not(:disabled) .nav-icon {
+        filter: brightness(0) saturate(100%) invert(77%) sepia(29%) saturate(1234%) hue-rotate(219deg) brightness(105%) contrast(104%);
+    }
+
+    .nav-text {
+        @include theme.body2-typography;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .nav-item {
+        max-width: none;
+
+        .nav-text {
+            display: none;
+        }
+    }
+}
+
+// Allow consumers to override icon filter for special cases
+.watch-howto-item {
+    .nav-icon {
+        filter: none !important;
+        opacity: 1;
+    }
+}

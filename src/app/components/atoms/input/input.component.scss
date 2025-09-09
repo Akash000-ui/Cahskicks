@@ -1,0 +1,55 @@
+// Input Component Styles
+// Matching React input component exactly
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--text-low-emphasis);
+}
+
+.custom-input {
+    width: 560px;
+    height: 56px;
+    padding: 12px 17px;
+    gap: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border-low-emphasis);
+    background: #3A3A3D;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-medium-emphasis);
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+        color: var(--text-low-emphasis);
+    }
+
+    &:focus,
+    &.focused {
+        border: 1px solid var(--primary-purple-400);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .custom-input {
+        width: 100%;
+        max-width: 560px;
+    }
+}

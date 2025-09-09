@@ -1,0 +1,66 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.launch-card {
+    width: 370px;
+    height: 250px;
+    min-height: 250px;
+    background-color: var(--bg-elevation-1);
+    border: 1px solid var(--border-low-emphasis);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+    .launch-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .launch-text {
+            flex: 1;
+
+            .launch-title {
+                @include theme.h1-typography;
+                margin: 0 0 16px 0;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 1.3;
+                color: var(--text-high-emphasis);
+            }
+
+            .launch-body {
+                @include theme.body1-typography;
+                color: var(--text-medium-emphasis);
+                // margin: 0 0 32px 0;
+                font-weight: 400;
+                line-height: 1.5;
+                font-size: 16px;
+
+                // Strong text styling
+                :global(strong) {
+                    color: var(--primary-white);
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .launch-button {
+            align-self: flex-start;
+            margin-top: auto;
+            margin-bottom: 16px; // provide some space below the button
+            padding-bottom: 70px;
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .launch-card {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        padding: 24px;
+    }
+}

@@ -1,0 +1,37 @@
+.cell {
+    border: none;
+    border-bottom: none;
+    padding: 12px 20px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 14px;
+    color: var(--text-high-emphasis);
+
+    &.cell-head {
+        background-color: var(--structural-grey-100);
+        font-weight: 600;
+        color: var(--text-medium-emphasis);
+    }
+
+    &.cell-body {
+        background-color: transparent;
+        font-weight: 400;
+    }
+
+    &.cell-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    &.align-left {
+        text-align: left;
+    }
+
+    &.align-center {
+        text-align: center;
+    }
+
+    &.align-right {
+        text-align: right;
+    }
+}

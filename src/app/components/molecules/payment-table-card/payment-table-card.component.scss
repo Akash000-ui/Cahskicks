@@ -1,0 +1,85 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.payments-card {
+    width: 100%;
+    background-color: var(--bg-elevation-1);
+    border: 1px solid var(--border-low-emphasis);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+    .payments-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+
+        .payments-title {
+            @include theme.h2-typography;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .info-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+            filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(296%) hue-rotate(225deg) brightness(91%) contrast(90%);
+        }
+    }
+
+    .payments-table {
+        .table-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 12px 20px;
+            background-color: var(--structural-grey-100);
+            border-radius: 8px;
+            margin-bottom: 20px;
+
+            .table-col {
+                @include theme.caption-typography;
+                font-weight: 600;
+                color: var(--text-medium-emphasis);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                font-size: 12px;
+                font-family: var(--font-family);
+            }
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+
+            .empty-icon {
+                width: 231px;
+                height: 160px;
+                margin-bottom: 20px;
+                opacity: 0.8;
+            }
+
+            .empty-text {
+                @include theme.body1-typography;
+                color: var(--text-medium-emphasis);
+                margin: 0 0 12px 0;
+                font-family: var(--font-family);
+            }
+
+            .empty-action {
+                @include theme.body1-typography;
+                color: var(--primary-purple-400);
+                text-decoration: none;
+                font-weight: 500;
+                font-family: var(--font-family);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

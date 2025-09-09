@@ -1,0 +1,19 @@
+<div class="slider-container" [class.disabled]="disabled" [class.vertical]="orientation === 'vertical'">
+    <div class="slider-track" #sliderTrack (click)="onSliderClick($event)" role="slider" [attr.aria-valuemin]="min"
+        [attr.aria-valuemax]="max" [attr.aria-valuenow]="value" [attr.aria-disabled]="disabled" tabindex="0">
+
+        <!-- Rail (background) -->
+        <div class="slider-rail"></div>
+
+        <!-- Progress (filled portion) -->
+        <div class="slider-progress" [style.width.%]="orientation === 'horizontal' ? progressPercentage : null"
+            [style.height.%]="orientation === 'vertical' ? progressPercentage : null">
+        </div>
+
+        <!-- Thumb -->
+        <div class="slider-thumb" #sliderThumb (mousedown)="onThumbMouseDown($event)"
+            [style.left.%]="orientation === 'horizontal' ? progressPercentage : null"
+            [style.bottom.%]="orientation === 'vertical' ? progressPercentage : null">
+        </div>
+    </div>
+</div>

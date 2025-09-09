@@ -1,0 +1,64 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsla(247, 7%, 47%, 1);
+    border-radius: 4px;
+    height: 30px;
+    width: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    /* Hide focus ring on mouse click; keep for keyboard navigation only */
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--primary-purple-400);
+        outline-offset: 2px;
+    }
+
+    &.checked {
+        color: var(--primary-purple-400);
+    }
+
+    &.indeterminate {
+        color: var(--primary-purple-400);
+    }
+
+    &.size-small {
+        height: 24px;
+    }
+
+    &.size-medium {
+        height: 30px;
+    }
+
+    .disabled & {
+        cursor: not-allowed;
+    }
+}
+
+.checkbox-label {
+    color: var(--text-medium-emphasis);
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+
+    .disabled & {
+        cursor: not-allowed;
+    }
+}

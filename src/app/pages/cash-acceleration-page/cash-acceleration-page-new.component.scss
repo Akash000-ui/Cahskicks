@@ -1,0 +1,130 @@
+// .cash-acceleration-page {
+//     padding: 24px 0;
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     width: 100%;
+
+//     .page-header {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-start;
+//         margin-bottom: 32px;
+
+//         .header-content {
+//             .page-title {
+//                 margin: 0 0 8px 0;
+//                 font-size: 32px;
+//                 line-height: 40px;
+//                 font-weight: 700;
+//                 color: #28293D;
+//             }
+
+//             .page-subtitle {
+//                 margin: 0;
+//                 font-size: 16px;
+//                 line-height: 24px;
+//                 color: #8C8CA1;
+//             }
+//         }
+
+//         .header-avatar {
+//             .avatar-img {
+//                 width: 40px;
+//                 height: 40px;
+//                 border-radius: 50%;
+//             }
+//         }
+//     }
+
+//     .cards-section {
+//         margin-bottom: 48px;
+
+//         .cards-row {
+//             display: grid;
+//             grid-template-columns: 2fr 1fr;
+//             gap: 24px;
+
+//             @media (max-width: 1024px) {
+//                 grid-template-columns: 1fr;
+//                 gap: 20px;
+//             }
+//         }
+//     }
+
+//     .contracts-section {
+//         .section-header {
+//             margin-bottom: 24px;
+
+//             .section-title-container {
+//                 display: flex;
+//                 justify-content: space-between;
+//                 align-items: center;
+//                 margin-bottom: 24px;
+
+//                 .section-title {
+//                     margin: 0;
+//                     font-size: 24px;
+//                     line-height: 32px;
+//                     font-weight: 600;
+//                     color: #28293D;
+//                 }
+
+//                 .sync-button {
+//                     display: flex;
+//                     align-items: center;
+//                     gap: 8px;
+//                     background: none;
+//                     border: none;
+//                     color: #6C5CE7;
+//                     font-size: 14px;
+//                     cursor: pointer;
+//                     padding: 8px 12px;
+//                     border-radius: 8px;
+//                     transition: background-color 0.2s ease;
+
+//                     &:hover {
+//                         background-color: rgba(108, 92, 231, 0.1);
+//                     }
+
+//                     .sync-icon {
+//                         font-size: 16px;
+//                     }
+//                 }
+//             }
+
+//             .tabs-container {
+//                 display: flex;
+//                 gap: 0;
+//                 border-bottom: 1px solid #E8E8F0;
+
+//                 .tab-button {
+//                     padding: 12px 24px;
+//                     background: none;
+//                     border: none;
+//                     font-size: 14px;
+//                     font-weight: 500;
+//                     color: #8C8CA1;
+//                     cursor: pointer;
+//                     border-bottom: 2px solid transparent;
+//                     transition: all 0.2s ease;
+
+//                     &.active {
+//                         color: #6C5CE7;
+//                         border-bottom-color: #6C5CE7;
+//                     }
+
+//                     &:hover:not(.active) {
+//                         color: #28293D;
+//                     }
+//                 }
+//             }
+//         }
+
+//         .table-container {
+//             background: white;
+//             border-radius: 12px;
+//             overflow: hidden;
+//             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+//         }
+//     }
+// }

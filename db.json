@@ -1,0 +1,230 @@
+{
+  "contracts": [
+    {
+      "id": "1",
+      "name": "Spotify Music Streaming",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 8500,
+      "totalAvailable": 95000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "2",
+      "name": "Adobe Creative Suite",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 15000,
+      "totalAvailable": 180000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "3",
+      "name": "Microsoft Office 365",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 12000,
+      "totalAvailable": 144000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "4",
+      "name": "AWS Cloud Services",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 45000,
+      "totalAvailable": 540000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "5",
+      "name": "Salesforce CRM",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 25000,
+      "totalAvailable": 300000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "6",
+      "name": "Slack Business Plan",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 7500,
+      "totalAvailable": 90000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "7",
+      "name": "Zoom Pro License",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 5000,
+      "totalAvailable": 60000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "8",
+      "name": "Google Workspace",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 18000,
+      "totalAvailable": 216000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "9",
+      "name": "HubSpot Marketing",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 35000,
+      "totalAvailable": 420000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "10",
+      "name": "Notion Team Plan",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 3500,
+      "totalAvailable": 42000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "11",
+      "name": "Figma Professional",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 9000,
+      "totalAvailable": 108000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "12",
+      "name": "Dropbox Business",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 12500,
+      "totalAvailable": 150000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "13",
+      "name": "Zendesk Support",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 22000,
+      "totalAvailable": 264000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "14",
+      "name": "Atlassian Suite",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 28000,
+      "totalAvailable": 336000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    },
+    {
+      "id": "15",
+      "name": "Mailchimp Pro",
+      "currencyCode": "USD",
+      "type": "MONTHLY",
+      "perPayment": 11000,
+      "totalAvailable": 132000,
+      "totalFinanced": 0,
+      "status": "AVAILABLE",
+      "termLength": 12,
+      "fee": 12
+    }
+  ],
+  "cashkicks": [
+    {
+      "id": "1721123949384",
+      "name": "Q3 Software Licenses",
+      "status": "FUNDED",
+      "maturity": "July 16, 2025",
+      "rate": 12,
+      "currencyCode": "USD",
+      "totalRecieved": 450000,
+      "totalFinanced": 512000
+    },
+    {
+      "id": "1721370998013",
+      "name": "Marketing Tools Bundle",
+      "status": "PENDING",
+      "maturity": "August 19, 2025",
+      "rate": 12,
+      "currencyCode": "USD",
+      "totalRecieved": 285000,
+      "totalFinanced": 324000
+    },
+    {
+      "id": "1756967859515",
+      "name": "Cloud Infrastructure",
+      "status": "FUNDED",
+      "maturity": "September 4, 2026",
+      "rate": 12,
+      "currencyCode": "USD",
+      "totalRecieved": 625000,
+      "totalFinanced": 712000
+    },
+    {
+      "id": "1432",
+      "name": "jdhfnbbdkfj",
+      "contracts": [
+        "4",
+        "9",
+        "14",
+        "5",
+        "7"
+      ],
+      "rate": 0.12,
+      "payBackAmount": 1864315.04,
+      "currencyCode": "USD"
+    }
+  ]
+}

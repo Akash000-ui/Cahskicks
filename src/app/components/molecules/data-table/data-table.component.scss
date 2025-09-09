@@ -1,0 +1,178 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.table-container {
+    background: var(--bg-elevation-1);
+    padding: 32px;
+    color: var(--text-high-emphasis);
+    border: 1px solid var(--border-low-emphasis);
+    border-radius: 12px;
+    min-width: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &.full-width {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+.table-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-high-emphasis);
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+.data-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    .table-head {
+        .table-row {
+            .table-cell {
+                background-color: var(--structural-grey-100);
+            }
+
+            .table-cell:first-child {
+                border-top-left-radius: 8px;
+            }
+
+            .table-cell:last-child {
+                border-top-right-radius: 8px;
+            }
+        }
+    }
+
+    .table-cell {
+        padding-block: 16px;
+        padding-inline: 20px;
+        border: none;
+        text-align: left;
+        vertical-align: middle;
+
+        &.checkbox-cell {
+            min-width: 44px;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        &.numeric-column {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+    }
+
+    .table-header-text {
+        @include theme.caption-typography;
+        font-weight: 600;
+        color: var(--text-medium-emphasis);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+    }
+
+    .table-body {
+        .table-row {
+            border-bottom: 1px solid var(--border-low-emphasis);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: var(--bg-elevation-2);
+            }
+
+            &.selected {
+                background-color: var(--primary-purple-600) !important;
+
+                &:hover {
+                    background-color: var(--primary-purple-600) !important;
+                }
+            }
+
+            .table-cell {
+                @include theme.body2-typography;
+                color: var(--text-high-emphasis);
+                font-size: 16px;
+                font-weight: 500;
+
+                &.status-column {
+                    padding: 8px 12px;
+                }
+
+                .status-badge {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    color: #EAEAEA;
+                    background-color: #2A2A2D;
+                    border: 1px solid #3A3A3D;
+                    line-height: 1;
+
+                    &.status-available {
+                        background-color: #2A2A2D;
+                        border: 1px solid #3A3A3D;
+                    }
+
+                    &.status-unavailable {
+                        background-color: #2A2A2D;
+                        border: 1px solid #3A3A3D;
+                    }
+
+                    &.status-pending {
+                        background-color: #2A2A2D;
+                        border: 1px solid #3A3A3D;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+
+    .empty-icon {
+        width: 120px;
+        height: 80px;
+        margin-bottom: 20px;
+        opacity: 0.6;
+        filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(296%) hue-rotate(225deg) brightness(91%) contrast(90%);
+    }
+
+    .empty-title {
+        @include theme.body1-typography;
+        color: var(--text-medium-emphasis);
+        margin: 0 0 12px 0;
+    }
+
+    .empty-subtitle {
+        @include theme.body1-typography;
+        color: var(--primary-purple-400);
+        text-decoration: none;
+        font-weight: 500;
+        margin: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

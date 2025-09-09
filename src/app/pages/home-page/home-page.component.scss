@@ -1,0 +1,107 @@
+.home-page {
+    padding: 16px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    .home-header {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .page-title {
+            margin: 0;
+            color: #E9E8E9;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            letter-spacing: -0.015em;
+            text-transform: none;
+            font-family: gilory;
+        }
+
+        .page-date {
+            margin: 0;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+            color: var(--text-medium-emphasis);
+            font-family: var(--font-family);
+        }
+
+        .help-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+
+            &:hover {
+                background: linear-gradient(135deg, #5855eb, #7c3aed);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            }
+
+            .help-icon {
+                font-size: 16px;
+            }
+
+            .help-text {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .cards-section {
+        margin-bottom: 48px;
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    }
+
+    .payments-section {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        padding: 16px 0;
+
+        .home-header {
+            margin-bottom: 24px;
+
+            .page-title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
+        .cards-section {
+            margin-bottom: 32px;
+        }
+    }
+}

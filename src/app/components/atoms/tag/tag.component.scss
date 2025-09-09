@@ -1,0 +1,15 @@
+// Tag Component Styles
+// Matching React tag component exactly
+
+.tag-container {
+    background-color: var(--bg-elevation-2);
+    color: var(--text-medium-emphasis);
+    padding: 4px 8px;
+    width: fit-content;
+    border-radius: 4px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    display: inline-block;
+}

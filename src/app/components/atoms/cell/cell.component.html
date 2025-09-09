@@ -1,0 +1,6 @@
+<td class="cell" [class.cell-head]="type === 'head'" [class.cell-body]="type === 'body'" [class.cell-sticky]="sticky"
+    [class.align-left]="align === 'left'" [class.align-center]="align === 'center'"
+    [class.align-right]="align === 'right'" [style.width]="width">
+
+    <ng-content></ng-content>
+</td>

@@ -1,0 +1,20 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px;
+    color: var(--text-high-emphasis);
+
+    .logo-icon {
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        @include theme.h1-typography;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+}

@@ -1,0 +1,7 @@
+<button class="tab-btn" [class.selected]="selected" [class.disabled]="disabled" [disabled]="disabled"
+    (click)="onClick()" (keydown)="onKeyDown($event)" role="tab" [attr.aria-selected]="selected"
+    [attr.aria-disabled]="disabled" tabindex="0">
+
+    <img *ngIf="icon" [src]="icon" alt="" class="tab-icon">
+    <span class="tab-label">{{ label }}</span>
+</button>

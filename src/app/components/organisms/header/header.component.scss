@@ -1,0 +1,63 @@
+@use '../../../themes/material-theme.scss' as theme;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+
+    .header-title {
+        @include theme.title-typography;
+        margin: 0;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .header-subtitle {
+        @include theme.h2-typography;
+        color: var(--text-low-emphasis);
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.icon-container {
+    flex-shrink: 0;
+
+    .header-icon {
+        border-radius: 50%;
+        border: 1px solid var(--border-low-emphasis);
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .title-container {
+        .header-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

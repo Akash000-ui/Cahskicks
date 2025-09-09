@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@use './app/themes/material-theme.scss';
+
+/* Override Angular Material default theme */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gilroy', Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-elevation-0);
+  color: var(--text-high-emphasis);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove default Angular Material theming */
+.mat-typography {
+  font-family: 'Gilroy', Roboto, "Helvetica Neue", sans-serif;
+}
